@@ -1,0 +1,37 @@
+# Exclude All
+
+*
+
+# Include depth 0 Directories
+
+!*/
+
+# Common Files
+
+!.github/**/*
+!**/.gitignore
+!LICENSE
+!README.md
+
+# Assets
+
+!assets/*
+
+# Exercises
+
+!exercises/book/**/*
+!exercises/lecture/**/*
+!exercises/README.md
+
+# Assignments
+
+!assignments/**/*
+!assignments/README.md
+
+# Utilities
+
+!utils/scripts/*
+!utils/libraries/**/*
+!utils/templates/**/*
+!utils/README.md
+
