@@ -10,13 +10,13 @@ encouraging collaborations.
 ## Socials
 
 <img alt="Discord logo"
-    href=""
+    href="https://discord.gg/JmYYEwKhJw"
     width="70px"
     height="70px" 
     src="https://discord.com/assets/cb48d2a8d4991281d7a6a95d2f58195e.svg" 
 />
 <img alt="Whatsapp logo"
-    href=""
+    href="https://chat.whatsapp.com/FQnF0rVBcW2LKd9BnPPeTN"
     width="70px"
     height="70px" 
     src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
