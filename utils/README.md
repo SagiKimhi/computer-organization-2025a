@@ -2,14 +2,14 @@
 
 Random useful topic-oriented utilities.
 
-## [Scripts](scripts/)
+## [Binaries and Scripts](bin/)
 
-Useful utility scripts.
+Useful utility scripts and binaries.
 
-## [Libraries](libraries/)
+## [Libraries](lib/)
 
-Useful or interesting C libraries written by students and repository
-contributors.
+Useful external libraries written by students or imported from a 3rd party
+source or repository.
 
 ## [Templates](templates/)
 
@@ -24,5 +24,5 @@ can probably be modified to do so using pkg-config.
 
 ### [c-dotfiles](templates/c-dotfiles/)
 
-Useful C project configuration files.
+Useful C project configuration dotfiles.
 
