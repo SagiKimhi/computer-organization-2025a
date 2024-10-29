@@ -28,6 +28,15 @@ encouraging collaborations.
     </a>
 </span>
 
+## Running MARS Simulator (Linux)
+
+```shell
+# From repository root
+chmod +x ./utils/bin/mars.sh
+./utils/bin/mars.sh
+```
+
+
 ## Development Process
 
 1. Clone the repository (or a fork of this repo) and set up local configurations
