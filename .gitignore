@@ -30,8 +30,8 @@
 
 # Utilities
 
-!utils/scripts/*
-!utils/libraries/**/*
+!utils/bin/*
+!utils/lib/**/*
 !utils/templates/**/*
 !utils/README.md
 
