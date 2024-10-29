@@ -28,14 +28,73 @@ encouraging collaborations.
     </a>
 </span>
 
-## Running MARS Simulator (Linux)
+## Running MARS simulator
 
-```shell
-# From repository root
-chmod +x ./utils/bin/mars.sh
-./utils/bin/mars.sh
+You will need a working installation of the Java Development Kit (JDK) in order
+to run the MARS simulator.
+
+### Installing Java Development Kit (JDK)
+
+#### Installing JDK on Windows
+
+To install JDK (latest JDK version) use one of the following links to
+download and run the Oracle JDK 23 installer for windows.
+
+- [JDK-23 Installer (x64)](https://download.oracle.com/java/23/latest/jdk-23_windows-x64_bin.exe)
+- [JDK-23 MSI Installer (x64)](https://download.oracle.com/java/23/latest/jdk-23_windows-x64_bin.msi)
+
+#### Installing JDK on macOS
+
+To install JDK (latest JDK version) use one of the following links to
+download and run the Oracle JDK 23 installer for macOS.
+
+- [JDK-23 DMG Installer (x64)](https://download.oracle.com/java/23/latest/jdk-23_macos-x64_bin.dmg)
+- [JDK-23 DMG Installer (ARM64)](https://download.oracle.com/java/23/latest/jdk-23_macos-aarch64_bin.dmg)
+
+#### Installing JDK on Linux Debian (Ubuntu, Kali, etc.)
+
+Simply run the following from the terminal/shell:
+
+```sh
+sudo apt-get update \
+&& sudo apt-get install openjdk-23-jdk openjdk-23-jre
 ```
 
+##### 
+
+### Run MARS with java
+
+To run the MARS simulator java must be installed on your system.
+
+After making sure java is installed, execute the
+[mars.jar](utils/lib/mars-4.5.0.jar) file by running following command from the
+repository's root directory.
+
+```sh
+java -jar ./utils/lib/mars-4.5.0.jar
+```
+
+### Run MARS with bash
+
+Simply run the [mars.bash](utils/bin/mars.bash) script located under `utils/bin`
+from any terminal or shell with bash support.
+
+The script will also search for a java installation and attempt to install it
+for you if it could not find one via `apt-get`.
+
+Simply `cd` into the cloned repository's root directory and run:
+
+```bash
+$ ./utils/bin/mars.bash
+```
+
+If you get a permission denied error, you may need to make the file an
+executable. This can be done by running:
+
+```sh
+chmod +x ./utils/bin/mars.bash # Add execution permission to script
+./utils/bin/mars.bash # Execute script
+```
 
 ## Development Process
 
@@ -43,7 +102,7 @@ chmod +x ./utils/bin/mars.sh
    (see workflow example's configurations section).
 
 2. Create a new issue for whatever it is you will be working on, or select an
-   existing issue from the [issues page](issues/)
+   existing issue from the [issues-page](https://github.com/SagiKimhi/computer-organization-2025a/issues)
 
 3. Assign the issue to yourself, and create a dedicated branch for working on
    that issue using one of the name patterns listed below:
@@ -70,9 +129,9 @@ chmod +x ./utils/bin/mars.sh
     - assignment/\<issue-id\>/\<author\> : Use for working on your solution to
       an assignment not listed above from a different institution.
 
-## Complete workflow example
+## Basic git setup and workflow example
 
-The following is a workflow example to set up git and commit changes from a user
+The following example clones the repository, sets up basic git name and email user configurations, and commits changes a user
 called MrDocker working on maman11 assignment.
 
 ### Cloning the repository:
@@ -106,7 +165,7 @@ git config --local pull.rebase true
 git config --local push.followTags true
 ```
 
-### Setting up a new branch, staging, commiting, and pushing changes to remote
+### Creating a branch, staging, commiting, and pushing changes to remote
 
 ```sh
 # Creates a new branch called "assignment/maman11/MrDocker" and set it up to
@@ -114,15 +173,24 @@ git config --local push.followTags true
 #
 git checkout origin/main -b assignment/maman11/MrDocker
 
+# Make some changes, for this example pretend that we made changes to files
+# file1, file2, and file3 which we now want to commit.
+
 # Staging changes to file1, file2, and file3
 #
-git add file1 file2 file3
-
-# Alternatively, use the -p or --patch flag to inspect changes in each file and
-# interactively choose whether to skip/stage/edit change per-file for all
-# changed files
+# Option 1 - Staging changes from all changed files under the current directory
+#            and any subdirectory within it.
 #
-git add -p
+# Option 2 - Manually pick individual changes to each changed file from all
+#            tracked files use the -p or --patch flag to inspect changes in each
+#            file and interactively choose whether to skip/stage/edit change
+#            per-file for all changed files.
+#
+# Option 3 - Manually staging changes from a list of changed files
+#
+git add . # Option 1
+git add -p  # Option 2
+git add file1 file2 file3 # Option 3.
 
 # Inspect differences between staged changes and the HEAD branch
 #
